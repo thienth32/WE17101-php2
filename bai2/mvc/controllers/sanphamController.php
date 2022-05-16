@@ -1,9 +1,11 @@
 <?php
-
+require_once './models/sanpham.php';
 function danhsachSp(){
     // lấy danh sách sản phẩm từ csdl
-    
-    $name = "Thienth dep trai";
+    $products = ds_sanpham();
+    // echo "<pre>";
+    // var_dump($products);die;
+    // $name = "Thienth dep trai";
     include_once './views/trang-chu.php';
 }
 

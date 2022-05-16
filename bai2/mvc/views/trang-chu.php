@@ -7,7 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Xin chào, đây là trang chủ</h2>
-    <h2>Tôi tên là: <?= $name ?></h2>
+    <h2>Danh sách sản phẩm</h2>
+    <ul>
+        <?php foreach ($products as $p): ?>
+            <li><?= $p['name']?></li>
+        <?php endforeach ?>
+    </ul>
 </body>
 </html>
