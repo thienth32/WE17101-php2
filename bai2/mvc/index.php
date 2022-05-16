@@ -17,6 +17,8 @@ switch ($url) {
         break;
     case 'remove-product':
         # diều hướng về controller xóa sản phẩm
+        require_once './controllers/sanphamController.php';
+        echo xoaSp();
         break;
     default:
         echo "Đường dẫn không tồn tại";

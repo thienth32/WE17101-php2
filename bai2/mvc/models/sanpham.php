@@ -5,4 +5,10 @@ function ds_sanpham(){
     $sql = "select * from products where name like '%$keyword%' ";
     return getData($sql);
 }
+
+function xoa_sanpham(){
+    $id = $_GET['id'];
+    $sql = "delete from products where id = $id";
+    getData($sql, false);
+}
 ?>
