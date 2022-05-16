@@ -8,9 +8,12 @@
 </head>
 <body>
     <h2>Danh sách sản phẩm</h2>
+    <form action="">
+        <input type="text" placeholder="tìm kiếm..." name="keyword">
+    </form>
     <ul>
         <?php foreach ($products as $p): ?>
-            <li><?= $p['name']?></li>
+            <li><?= $p['name']?> <a href="?url=remove-product&id=<?= $p['id']?>">xóa</a></li>
         <?php endforeach ?>
     </ul>
 </body>
