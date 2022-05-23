@@ -8,6 +8,11 @@
 
 // tạo 2 đối tượng laptop
 // thực hiện cả 2 hành động trên với 2 đối tượng vừa tạo
+
+// tạo ra class cửa hàng
+// thuộc tính: tên cửa hàng, địa chỉ, số tiền
+// mỗi lần bán 1 máy tính thì tiền của cửa hàng sẽ tăng lên bằng giá của sản phẩm vừa bán
+// tạo hàm getInfo trong class cửa hàng để hiển thị thông tin của cửa hàng
 class Laptop{
     var $ten;
     var $ma;
