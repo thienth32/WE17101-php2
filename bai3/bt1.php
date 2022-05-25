@@ -52,14 +52,17 @@ $poly->ten = "Cửa hàng công nghệ FPT Polytechnic";
 $poly->diachi = "Số 1 - Trịnh Văn Bô";
 $poly->tienvon = 0;
 echo $poly->getInfo();
+
 $hp100 = new Laptop();
 $hp100->ten = "HP Compaq 100";
 $hp100->ma = "HPCQ100";
 $hp100->soluong = 56;
 $hp100->gia = 150;
+
 echo $hp100->getInfo();
 $price = $hp100->sell(3);
 $poly->tienvon += $price;
+
 echo $hp100->getInfo();
 echo $poly->getInfo();
 
