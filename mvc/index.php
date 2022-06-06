@@ -23,6 +23,10 @@ switch ($url) {
         $ctr = new ProductController();
         echo $ctr->detail();
         break;
+    case "danh-sach-tk":
+        $ctr = new HomeController();
+        echo $ctr->listUser();
+        break;
     default:
         echo "Đường dẫn không tồn tại";
         break;

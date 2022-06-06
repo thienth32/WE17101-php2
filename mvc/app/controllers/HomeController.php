@@ -15,6 +15,13 @@ class HomeController{
         
         include_once "./app/views/product/list.php";
     }
+
+    public function listUser(){
+        $users = User::all();
+        // echo "<pre>";
+        // var_dump($users);die;
+        include_once './app/views/user/list.php';
+    }
 }
 
 ?>

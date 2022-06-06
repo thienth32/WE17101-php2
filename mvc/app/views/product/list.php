@@ -8,10 +8,6 @@
 </head>
 <body>
     <h2>Đây là trang danh sách sản phẩm</h2>
-    <ul>
-        <?php foreach($products as $p): ?>
-            <li>Sp: <?= $p->name ?></li>
-        <?php endforeach ?>
-    </ul>
+    
 </body>
 </html>
