@@ -17,10 +17,28 @@ class HomeController{
     }
 
     public function listUser(){
-        $users = User::all();
+        $keyword = isset($_GET['keyword']) ? trim($_GET['keyword']) : "";
+        if(empty($keyword)){
+            $users = User::all();
+        }else{
+            $users = User::where('name', 'like', "%$keyword%")->get();
+        }
+        
         // echo "<pre>";
         // var_dump($users);die;
         include_once './app/views/user/list.php';
+    }
+
+    public function userAddForm(){
+        include_once './app/views/user/add-form.php';
+    }
+
+    public function addNewUser(){
+        
+        $model = new User();
+        $model->fill($_POST);
+        $model->save();
+        header("location: danh-sach-tk");die;
     }
 }
 

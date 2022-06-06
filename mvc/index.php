@@ -27,6 +27,13 @@ switch ($url) {
         $ctr = new HomeController();
         echo $ctr->listUser();
         break;
+    case "tao-tk":
+        $ctr = new HomeController();
+        echo $ctr->userAddForm();
+        break;
+    case "luu-tao-tk": 
+        $ctr = new HomeController();
+        echo $ctr->addNewUser();
     default:
         echo "Đường dẫn không tồn tại";
         break;
