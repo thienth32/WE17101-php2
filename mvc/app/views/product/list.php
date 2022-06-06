@@ -1,13 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danh sách sản phẩm</title>
-</head>
-<body>
-    <h2>Đây là trang danh sách sản phẩm</h2>
-    
-</body>
-</html>
+<table border="1">
+    <thead>
+        <th>ID</th>
+        <th>Product name</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Promotion</th>
+    </thead>
+    <tbody>
+        <?php foreach($products as $p):?>
+            <tr>
+                <td><?= $p->id ?></td>
+                <td><?= $p->name ?></td>
+                <td><?= $p->category_id ?></td>
+                <td><?= $p->price ?></td>
+                <td><?= $p->promotion ?></td>
+            </tr>
+        <?php endforeach ?>
+    </tbody>
+</table>
