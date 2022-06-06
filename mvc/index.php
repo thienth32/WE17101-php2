@@ -34,6 +34,11 @@ switch ($url) {
     case "luu-tao-tk": 
         $ctr = new HomeController();
         echo $ctr->addNewUser();
+        break;
+    case "xoa-tk": 
+        $ctr = new HomeController();
+        echo $ctr->removeUser();
+        break;
     default:
         echo "Đường dẫn không tồn tại";
         break;

@@ -40,6 +40,12 @@ class HomeController{
         $model->save();
         header("location: danh-sach-tk");die;
     }
+
+    public function removeUser(){
+        $id = $_GET['id'];
+        User::destroy($id);
+        header("location: danh-sach-tk");die;
+    }
 }
 
 ?>
