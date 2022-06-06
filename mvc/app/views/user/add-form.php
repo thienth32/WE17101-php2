@@ -12,7 +12,11 @@
         Phone number: <input type="text" name="phone_number">
     </div>
     <div>
-        Role: <input type="number" name="role_id">
+        Role: <select name="role_id" >
+            <?php foreach($roles as $r ):?>
+                <option value="<?= $r->id ?>"><?= $r->name?></option>
+            <?php endforeach?>
+        </select>
     </div>
     <div>
         <button type="submit">Tạo tài khoản</button>

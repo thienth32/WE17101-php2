@@ -2,6 +2,7 @@
 namespace App\Controllers;
 use App\Models\User;
 use App\Models\Product;
+use App\Models\Role;
 
 class HomeController{
 
@@ -30,6 +31,7 @@ class HomeController{
     }
 
     public function userAddForm(){
+        $roles = Role::all();
         include_once './app/views/user/add-form.php';
     }
 
