@@ -4,11 +4,15 @@ use App\Models\User;
 use App\Models\Product;
 use App\Models\Role;
 
-class HomeController{
+class HomeController extends BaseController{
 
     public function index(){
-        
-       include_once './app/views/home/index.php';
+        $name = 'FPT Polytechnic';
+        $gioitinh = 2;
+        $this->render('home.index', [
+            'x' => $name, 
+            'gender' => $gioitinh
+        ]);
     }
 
     public function listProduct(){

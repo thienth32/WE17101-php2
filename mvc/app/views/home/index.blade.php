@@ -7,7 +7,8 @@
     <title>Trang chủ</title>
 </head>
 <body>
-    <h2>Xin chào các bạn</h2>
+    <h2>Xin chào, {{$x}}</h2>
+    <p>Giới tính: @if($gender == 1) Nam @else Nữ @endif</p>
     <p>Đây là nội dung trang chủ</p>
 </body>
 </html>
