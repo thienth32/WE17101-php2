@@ -48,6 +48,21 @@ class HomeController{
         User::destroy($id);
         header("location: danh-sach-tk");die;
     }
+
+    public function userEditForm(){
+        $id = $_GET['id'];
+        $user = User::find($id);
+        $roles = Role::all();
+        include_once './app/views/user/edit-form.php';
+    }
+
+    public function saveEditUser(){
+        $id = $_GET['id'];
+        $user = User::find($id);
+        $user->fill($_POST);
+        $user->save();
+        header("location: danh-sach-tk");die;
+    }
 }
 
 ?>

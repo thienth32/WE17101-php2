@@ -39,6 +39,14 @@ switch ($url) {
         $ctr = new HomeController();
         echo $ctr->removeUser();
         break;
+    case "sua-tk": 
+        $ctr = new HomeController();
+        echo $ctr->userEditForm();
+        break;
+    case "luu-sua-tk": 
+        $ctr = new HomeController();
+        echo $ctr->saveEditUser();
+        break;
     default:
         echo "Đường dẫn không tồn tại";
         break;
