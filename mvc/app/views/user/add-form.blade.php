@@ -1,3 +1,6 @@
+@extends('layouts.main')
+@section('title', "Tạo mới tài khoản")
+@section('content')
 <form action="luu-tao-tk" method="post" enctype="multipart/form-data">
     <div>
         name: <input type="text" name="name">
@@ -22,3 +25,4 @@
         <button type="submit">Tạo tài khoản</button>
     </div>
 </form>
+@endsection

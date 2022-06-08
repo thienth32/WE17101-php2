@@ -34,7 +34,7 @@ class HomeController extends BaseController{
 
     public function userAddForm(){
         $roles = Role::all();
-        include_once './app/views/user/add-form.php';
+        $this->render('user.add-form', compact('roles'));
     }
 
     public function addNewUser(){

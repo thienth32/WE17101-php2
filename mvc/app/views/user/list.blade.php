@@ -1,3 +1,7 @@
+@extends('layouts.main')
+@section('content')
+    
+
 <form action="" method="get">
     <input type="text" name="keyword" value="{{$keyword}}">
     <button type="submit">Tìm kiếm</button>
@@ -29,3 +33,4 @@
         @endforeach
     </tbody>
 </table>
+@endsection
