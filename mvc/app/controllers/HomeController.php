@@ -29,9 +29,7 @@ class HomeController extends BaseController{
             $users = User::where('name', 'like', "%$keyword%")->get();
         }
         
-        // echo "<pre>";
-        // var_dump($users);die;
-        include_once './app/views/user/list.php';
+        $this->render('user.list', compact('keyword', 'users'));
     }
 
     public function userAddForm(){
