@@ -1,5 +1,6 @@
 <?php
 
+const BASE_URL = "http://localhost/php2/we17101-php2/mvc/";
 require_once './vendor/autoload.php';
 require_once './commons/db.php';
 // về nhà cài đặt phần mềm composer vào máy tính của mình
@@ -11,6 +12,10 @@ use App\Controllers\ProductController;
 $url = !isset($_GET['url']) ? "/" : $_GET['url'];
 
 switch ($url) {
+    case 'demo-layout':
+        $ctr = new HomeController();
+        echo $ctr->demoLayout();
+        break;
     case '/':
         $ctr = new HomeController();
         echo $ctr->index();

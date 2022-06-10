@@ -6,6 +6,9 @@ use App\Models\Role;
 
 class HomeController extends BaseController{
 
+    public function demoLayout(){
+        $this->render('layouts.main');
+    }
     public function index(){
         $name = 'FPT Polytechnic';
         $gioitinh = 2;
