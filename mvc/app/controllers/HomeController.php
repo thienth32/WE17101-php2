@@ -58,7 +58,7 @@ class HomeController extends BaseController{
         $id = $_GET['id'];
         $user = User::find($id);
         $roles = Role::all();
-        include_once './app/views/user/edit-form.php';
+        $this->render('user.edit-form', compact('user', 'roles'));
     }
 
     public function saveEditUser(){
