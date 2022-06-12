@@ -20,7 +20,9 @@ $router->get('/', function(){
 });
 
 $router->get('login', [App\Controllers\AuthController::class, 'loginForm']);
+$router->post('login', [App\Controllers\AuthController::class, 'postLogin']);
 
+$router->any('logout', [App\Controllers\AuthController::class, 'logout']);
 // tất cả các đường dẫn nằm trong này thì phải thỏa mãn điều kiện đã đăng nhập
 $router->group(['before' => 'auth'], function($router){
     // phân biệt request method ->get(), ->post(), ->put(), ->any(),..
