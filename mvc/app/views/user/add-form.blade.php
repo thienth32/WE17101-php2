@@ -22,6 +22,10 @@
                         <input type="password" name="password"  class="form-control">
                     </div>
                     <div class="form-group">
+                        <label for="">Avatar </label>
+                        <input type="file" name="avatar" class="form-control">
+                    </div>
+                    <div class="form-group">
                         <label for="">Phone number </label>
                         <input type="text" name="phone_number" class="form-control">
                     </div>

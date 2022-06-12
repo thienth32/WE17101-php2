@@ -6,7 +6,7 @@ class User extends Model{
     public $timestamps = false;
     protected $fillable = [
         'name', 'email', 'phone_number',
-        'role_id', 'password'
+        'role_id'
     ];
 }
 ?>

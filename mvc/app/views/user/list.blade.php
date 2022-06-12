@@ -34,7 +34,9 @@
                             <td>{{$u->id}}</td>
                             <td>{{$u->name}}</td>
                             <td>{{$u->email}}</td>
-                            <td></td>
+                            <td>
+                                <img src="{{ BASE_URL . $u->avatar}}" width="70">
+                            </td>
                             <td>{{$u->role_id}}</td>
                             <td>
                                 <a class="btn btn-sm btn-info" href="sua-tk/{{ $u->id }}">Sửa</a>
