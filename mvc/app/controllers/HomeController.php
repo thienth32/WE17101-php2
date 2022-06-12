@@ -45,13 +45,13 @@ class HomeController extends BaseController{
         $model = new User();
         $model->fill($_POST);
         $model->save();
-        header("location:" . BASE_URL . ' danh-sach-tk');die;
+        header("location:" . BASE_URL . 'danh-sach-tk');die;
     }
 
     public function removeUser($id){
         
         User::destroy($id);
-        header("location:" . BASE_URL . ' danh-sach-tk');die;
+        header("location:" . BASE_URL . 'danh-sach-tk');die;
     }
 
     public function userEditForm($id){
