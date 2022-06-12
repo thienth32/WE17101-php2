@@ -10,7 +10,7 @@ $router->get('/', function(){
     return "trang chủ";
 });
 // phân biệt request method ->get(), ->post(), ->put(), ->any(),..
-$router->get('/danh-sach-tk', [App\Controllers\HomeController::class, 'listUser']);
+$router->get('danh-sach-tk', [App\Controllers\HomeController::class, 'listUser']);
 
 $router->get('tao-tk', [App\Controllers\HomeController::class, 'userAddForm']);
 $router->post('tao-tk', [App\Controllers\HomeController::class, 'addNewUser']);

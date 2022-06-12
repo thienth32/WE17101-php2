@@ -60,7 +60,6 @@ class HomeController extends BaseController{
     }
 
     public function removeUser($id){
-        
         User::destroy($id);
         header("location:" . BASE_URL . 'danh-sach-tk');die;
     }
@@ -74,6 +73,14 @@ class HomeController extends BaseController{
     public function saveEditUser($id){
         
         $user = User::find($id);
+        $filename = $user->avatar;
+        $avatarFile = $_FILES['avatar'];
+        if($avatarFile['size'] > 0){
+            $filename = uniqid() . '-' . $avatarFile['name'];
+            move_uploaded_file($avatarFile['tmp_name'], './public/uploads/avatars/' . $filename);
+            $filename = "public/uploads/avatars/" . $filename;
+        }
+        $user->avatar = $filename;
         $user->fill($_POST);
         $user->save();
         header("location:" . BASE_URL . 'danh-sach-tk');die;
