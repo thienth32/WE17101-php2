@@ -202,5 +202,6 @@
 <!-- ./wrapper -->
 
 <?php echo $this->runChild('layouts.script'); ?>
+<?php echo $this->yieldContent('page-script'); ?>
 </body>
 </html>

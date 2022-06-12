@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '1435b9307a31f356a1dcedf12bfbd3a9722ada1f',
+        'reference' => '11b0a7f6a7b35388d36d584b5e0d7f615135d630',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '1435b9307a31f356a1dcedf12bfbd3a9722ada1f',
+            'reference' => '11b0a7f6a7b35388d36d584b5e0d7f615135d630',
             'dev_requirement' => false,
         ),
         'doctrine/inflector' => array(
@@ -134,6 +134,15 @@
             'install_path' => __DIR__ . '/../nesbot/carbon',
             'aliases' => array(),
             'reference' => '97a34af22bde8d0ac20ab34b29d7bfe360902055',
+            'dev_requirement' => false,
+        ),
+        'phroute/phroute' => array(
+            'pretty_version' => 'v2.2.0',
+            'version' => '2.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phroute/phroute',
+            'aliases' => array(),
+            'reference' => 'c1893b885966a0c7b50b9239dd867fda7a312dfa',
             'dev_requirement' => false,
         ),
         'psr/container' => array(

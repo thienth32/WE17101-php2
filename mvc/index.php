@@ -3,59 +3,6 @@
 const BASE_URL = "http://localhost/php2/we17101-php2/mvc/";
 require_once './vendor/autoload.php';
 require_once './commons/db.php';
-// về nhà cài đặt phần mềm composer vào máy tính của mình
-// https://getcomposer.org/download/
-use App\Controllers\HomeController;
-use App\Controllers\ProductController;
-// $ctr = new HomeController();
-// $ctr->index();
-$url = !isset($_GET['url']) ? "/" : $_GET['url'];
-
-switch ($url) {
-    case 'demo-layout':
-        $ctr = new HomeController();
-        echo $ctr->demoLayout();
-        break;
-    case '/':
-        $ctr = new HomeController();
-        echo $ctr->index();
-        break;
-    case "danh-sach-sp":
-        $ctr = new HomeController();
-        echo $ctr->listProduct();
-        break;
-    case "chi-tiet-sp":
-        $ctr = new ProductController();
-        echo $ctr->detail();
-        break;
-    case "danh-sach-tk":
-        $ctr = new HomeController();
-        echo $ctr->listUser();
-        break;
-    case "tao-tk":
-        $ctr = new HomeController();
-        echo $ctr->userAddForm();
-        break;
-    case "luu-tao-tk": 
-        $ctr = new HomeController();
-        echo $ctr->addNewUser();
-        break;
-    case "xoa-tk": 
-        $ctr = new HomeController();
-        echo $ctr->removeUser();
-        break;
-    case "sua-tk": 
-        $ctr = new HomeController();
-        echo $ctr->userEditForm();
-        break;
-    case "luu-sua-tk": 
-        $ctr = new HomeController();
-        echo $ctr->saveEditUser();
-        break;
-    default:
-        echo "Đường dẫn không tồn tại";
-        break;
-}
-
+require_once './commons/route.php';
 
 ?>

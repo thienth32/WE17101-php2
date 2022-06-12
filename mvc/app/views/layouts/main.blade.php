@@ -202,5 +202,6 @@
 <!-- ./wrapper -->
 
 @include('layouts.script')
+@yield('page-script')
 </body>
 </html>

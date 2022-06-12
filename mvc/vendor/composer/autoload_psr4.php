@@ -20,6 +20,7 @@ return array(
     'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
     'Psr\\SimpleCache\\' => array($vendorDir . '/psr/simple-cache/src'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
+    'Phroute\\Phroute\\' => array($vendorDir . '/phroute/phroute/src/Phroute'),
     'Illuminate\\Support\\' => array($vendorDir . '/illuminate/collections', $vendorDir . '/illuminate/conditionable', $vendorDir . '/illuminate/macroable', $vendorDir . '/illuminate/support'),
     'Illuminate\\Pipeline\\' => array($vendorDir . '/illuminate/pipeline'),
     'Illuminate\\Events\\' => array($vendorDir . '/illuminate/events'),

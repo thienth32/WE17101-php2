@@ -46,6 +46,7 @@ class ComposerStaticInit6be9a2e44d73708ad4271c32ba315bda
         array (
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Container\\' => 14,
+            'Phroute\\Phroute\\' => 16,
         ),
         'I' => 
         array (
@@ -127,6 +128,10 @@ class ComposerStaticInit6be9a2e44d73708ad4271c32ba315bda
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'Phroute\\Phroute\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phroute/phroute/src/Phroute',
         ),
         'Illuminate\\Support\\' => 
         array (

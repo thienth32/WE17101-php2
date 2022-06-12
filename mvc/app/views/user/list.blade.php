@@ -38,7 +38,7 @@
                             <td>{{$u->role_id}}</td>
                             <td>
                                 <a href="sua-tk?id={{ $u->id }}">Sửa</a>
-                                <a href="xoa-tk?id={{ $u->id }}">Xóa</a>
+                                <a class="btn btn-sm btn-danger btn-remove" href="xoa-tk?id={{ $u->id }}">Xóa</a>
                             </td>
                         </tr>
                     @endforeach
@@ -47,7 +47,13 @@
         </div>
     </div>
 </div>
-
-
-
+@endsection
+@section('page-script')
+<script>
+    $(document).ready(function(){
+        $('.btn-remove').click(function(){
+            alert(1);
+        });
+    });
+</script>
 @endsection

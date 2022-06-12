@@ -7,6 +7,7 @@
     "require": {
         "illuminate/database": "^9.15",
         "illuminate/events": "^9.15",
-        "eftec/bladeone": "^4.5"
+        "eftec/bladeone": "^4.5",
+        "phroute/phroute": "^2.2"
     }
 }
