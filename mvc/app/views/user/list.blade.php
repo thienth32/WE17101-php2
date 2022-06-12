@@ -37,8 +37,8 @@
                             <td></td>
                             <td>{{$u->role_id}}</td>
                             <td>
-                                <a href="sua-tk?id={{ $u->id }}">Sửa</a>
-                                <a class="btn btn-sm btn-danger btn-remove" href="xoa-tk?id={{ $u->id }}">Xóa</a>
+                                <a class="btn btn-sm btn-info" href="sua-tk/{{ $u->id }}">Sửa</a>
+                                <a class="btn btn-sm btn-danger btn-remove" href="xoa-tk/{{ $u->id }}">Xóa</a>
                             </td>
                         </tr>
                     @endforeach

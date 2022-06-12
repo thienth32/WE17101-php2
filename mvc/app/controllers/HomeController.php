@@ -12,7 +12,7 @@ class HomeController extends BaseController{
     public function index(){
         $name = 'FPT Polytechnic';
         $gioitinh = 2;
-        $this->render('home.index', [
+        return $this->render('home.index', [
             'x' => $name, 
             'gender' => $gioitinh
         ]);
@@ -32,12 +32,12 @@ class HomeController extends BaseController{
             $users = User::where('name', 'like', "%$keyword%")->get();
         }
         
-        $this->render('user.list', compact('keyword', 'users'));
+        return $this->render('user.list', compact('keyword', 'users'));
     }
 
     public function userAddForm(){
         $roles = Role::all();
-        $this->render('user.add-form', compact('roles'));
+        return $this->render('user.add-form', compact('roles'));
     }
 
     public function addNewUser(){
@@ -45,28 +45,27 @@ class HomeController extends BaseController{
         $model = new User();
         $model->fill($_POST);
         $model->save();
-        header("location: danh-sach-tk");die;
+        header("location:" . BASE_URL . ' danh-sach-tk');die;
     }
 
-    public function removeUser(){
-        $id = $_GET['id'];
+    public function removeUser($id){
+        
         User::destroy($id);
-        header("location: danh-sach-tk");die;
+        header("location:" . BASE_URL . ' danh-sach-tk');die;
     }
 
-    public function userEditForm(){
-        $id = $_GET['id'];
+    public function userEditForm($id){
         $user = User::find($id);
         $roles = Role::all();
-        $this->render('user.edit-form', compact('user', 'roles'));
+        return $this->render('user.edit-form', compact('user', 'roles'));
     }
 
-    public function saveEditUser(){
-        $id = $_GET['id'];
+    public function saveEditUser($id){
+        
         $user = User::find($id);
         $user->fill($_POST);
         $user->save();
-        header("location: danh-sach-tk");die;
+        header("location:" . BASE_URL . 'danh-sach-tk');die;
     }
 }
 

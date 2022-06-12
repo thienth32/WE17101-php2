@@ -1,7 +1,7 @@
 <?php $_shouldextend[1]=1; ?>
 <?php $this->startSection('title', "Tạo mới tài khoản"); ?>
 <?php $this->startSection('content'); ?>
-<form action="luu-sua-tk?id=<?= $user->id ?>" method="post" enctype="multipart/form-data">
+<form method="post" enctype="multipart/form-data">
  <div>
  name: <input type="text" name="name" value="<?= $user->name ?>">
  </div>

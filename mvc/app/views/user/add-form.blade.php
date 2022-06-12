@@ -8,7 +8,7 @@
                 <h3 class="card-title">Tạo mới tài khoản</h3>
             </div>
             <div class="card-body">
-                <form action="luu-tao-tk" method="post" enctype="multipart/form-data">
+                <form method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="">Name</label>
                         <input type="text" name="name" class="form-control">
