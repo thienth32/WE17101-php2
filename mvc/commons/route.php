@@ -36,6 +36,9 @@ $router->group(['before' => 'auth'], function($router){
     $router->post('sua-tk/{id}', [App\Controllers\HomeController::class, 'saveEditUser']);
 
     $router->get('xoa-tk/{id}', [App\Controllers\HomeController::class, 'removeUser']);
+    
+    $router->get('danh-sach-sp', [App\Controllers\ProductController::class, 'index']);
+    $router->get('danh-sach-danh-muc', [App\Controllers\CategoryController::class, 'index']);
 
 });
 

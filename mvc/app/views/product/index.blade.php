@@ -11,7 +11,7 @@
             <tr>
                 <td><?= $p->id ?></td>
                 <td><?= $p->name ?></td>
-                <td><?= $p->category_id ?></td>
+                <td><?= $p->category->name ?></td>
                 <td><?= $p->price ?></td>
                 <td><?= $p->promotion ?></td>
             </tr>

@@ -1,10 +1,14 @@
 <?php
 namespace App\Controllers;
 
-class ProductController{
+use App\Models\Product;
 
-    public function detail(){
-       
+class ProductController extends BaseController{
+
+    public function index(){
+        $products = Product::all();
+        // $products->load('category');
+        return $this->render('product.index', compact('products'));
     }
 
 
