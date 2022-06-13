@@ -12,10 +12,16 @@
                     <div class="form-group">
                         <label for="">Name</label>
                         <input type="text" name="name" class="form-control">
+                        @if(isset($_GET['nameerr']))
+                        <span class="text-danger">{{$_GET['nameerr']}}</span>
+                        @endif
                     </div>
                     <div class="form-group">
                         <label for="">Email</label>
                         <input type="email" name="email"  class="form-control">
+                        @if(isset($_GET['emailerr']))
+                        <span class="text-danger">{{$_GET['emailerr']}}</span>
+                        @endif
                     </div>
                     <div class="form-group">
                         <label for="">Password </label>

@@ -41,7 +41,25 @@ class HomeController extends BaseController{
     }
 
     public function addNewUser(){
-        
+        extract($_POST);
+        $nameerr = "";
+        $emailerr = "";
+        if(strlen($name) == 0){
+            $nameerr = "Không được để trống tên";
+        }
+
+        if(strlen($email) == 0){
+            $emailerr = "Không được để trống email";
+        }else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+            $emailerr = "Không đúng định dạng email";
+        }else if(User::where('email', $email)->count() > 0){
+            $emailerr = "Email đã tồn tại";
+        }
+
+        if(strlen($nameerr . $emailerr) > 0){
+            header('location: ' . BASE_URL . "tao-tk?nameerr=$nameerr&emailerr=$emailerr");die;
+        }
+
         $model = new User();
         $model->fill($_POST);
         // xử lý ảnh
